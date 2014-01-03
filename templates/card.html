@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/cards.css" />
+</head>
+<body>
+  <img id="card" class="rotate{{rotate}} {{orientation}}" src="{{path}}" width={{width}} height={{height}} />
+  <div id="control">
+    <form action="/annotate" method="post">
+      <input type="hidden" name="subjectId" value="{{_id}}">
+      <input type="hidden" name="collection" value="cards">
+      <div id="quality">
+        This card is: <input type="radio" name="quality" value="1">+1</input> <input type="radio" name="quality" value="0">0</input> <input type="radio" name="quality" value="-1">-1</input> <input type="radio" name="quality" value="blank">blank</input> <input type="radio" name="quality" value="strikeout">scribbled out</input> <input type="radio" name="quality" value="null">mu</input> 
+      </div>
+      <p>If you'd like to transcribe some or all of this card, feel free to do so below.</p>
+      <textarea type="text" rows="5" cols="80" name="transcription"></textarea><br/>
+      <input type="submit" value="Show me another card"/>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/cards.css" />
+</head>
+<body>
+  <div>
+    {% if lastPageNumber %}
+      <a href="/notebook/{{notebook}}/{{lastPageNumber}}">previous</a>
+    {% endif %}
+    {% if nextPageNumber %}
+      <a href="/notebook/{{notebook}}/{{nextPageNumber}}">next</a>
+    {% endif %}
+  </div>
+  <img id="notebook" width={{width}} height={{height}} src="{{path}}">
+  <div>
+    {% if lastPageNumber %}
+      <a href="/notebook/{{notebook}}/{{lastPageNumber}}">previous</a>
+    {% endif %}
+    {% if nextPageNumber %}
+      <a href="/notebook/{{notebook}}/{{nextPageNumber}}">next</a>
+    {% endif %}
+  </div>
+</body>
+</html>
